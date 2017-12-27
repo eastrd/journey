@@ -1,0 +1,13 @@
+### Notes on NPM ###
+- `npm init`: Create a package .json file
+- `npm adduser`:  Create an account with a page on npmjs.com and have the ability to publish packages that others can install and enjoy. `npm whoami`:  To see who you are logged in as.
+- `npm init --scope=<username>`:  Creates the package .json file under the user.
+- `npm install <modulename>`: Install a module. Dependencies are fetched from the registry, and unpacked in the node_modules folder.
+- `npm ls`: Shows what has been already installed (dependencies).
+- `npm test`: Runs the test command under "script" from package.json to make sure everything is okay.
+- "A package without a readme and some metadata is like a bunch of JavaScript without instructions or git repo links."
+- `npm publish`:  Packages get into the registry.
+- `npm view`: To view package details and to check if a name is already taken.
+- Semantic Version: 1(Major version. Update for breaking API changes).2(Minor version. Update for API additions).3(Patch version. Update for every change)
+- `npm version [SemVer]`: Update the package.json file, and also commit the change to git if the project is a git repository. Or, you can open up your package.json file by hand, and put some new numbers in the "version" field. The npm registry won't let you publish a new release of your package without updating the version number! Ever! So, get used to the idea of bumping the version whenever you want to publish, even if the change is really minor.  
+- `npm dist-tag add <pkg>@<version> [<tag>]`: Add a new tag. By default, the "latest" version is what gets installed.  When you publish, the version that you publish gets tagged as "latest". This is generally great, because most of the time you publish things when you're ready for users to use them. However, if you need to publish something, and *not* make it the default version of a package (for example, if it's a security release for a legacy version, or something), then you can manually manage these distribution tags with the `dist-tag` function.  
